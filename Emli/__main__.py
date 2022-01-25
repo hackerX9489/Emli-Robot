@@ -82,7 +82,7 @@ def get_readable_time(seconds: int) -> str:
 
 PM_START_TEXT = """
 *Hello {} !*
-✪ I'm Emli anime-theme management bot [✨](https://te.legra.ph/file/074ef8d210745e3380baf.jpg)
+✪ I'm Ultron group management bot [✨](https://te.legra.ph/file/074ef8d210745e3380baf.jpg)
 ────────────────────────
 × *Bot Uptime:* `{}`
 × `{}` *users, across* `{}` *chats*
@@ -92,7 +92,7 @@ PM_START_TEXT = """
 
 buttons = [
     [
-        InlineKeyboardButton(text="About Emli Robot", callback_data="emli_"),
+        InlineKeyboardButton(text="About Ultron Robot", callback_data="emli_"),
     ],
     [
         InlineKeyboardButton(text="Help", callback_data="help_back"),
@@ -113,7 +113,7 @@ Click on the button bellow to get description about specifics command."""
 EMI_IMG = "https://te.legra.ph/file/074ef8d210745e3380baf.jpg"
 
 DONATE_STRING = """Heya, glad to hear you want to donate!
- You can support the project by contacting @shado_hackers \
+ You can support the project by contacting @nn948 \
  Supporting isnt always financial! \
  Those who cannot provide monetary support are welcome to help us develop the bot at ."""
 
@@ -229,7 +229,7 @@ def start(update: Update, context: CallbackContext):
             )
     else:
         update.effective_message.reply_text(
-            f"<b>Hi👋 I'm Emli robot!</b>\n<b>Started working since:</b> <code>{uptime}</code>",
+            f"<b>Hi👋 I'm Ultron robot!</b>\n<b>Started working since:</b> <code>{uptime}</code>",
             parse_mode=ParseMode.HTML
        )
 
@@ -360,15 +360,14 @@ def emli_about_callback(update, context):
     query = update.callback_query
     if query.data == "emli_":
         query.message.edit_text(
-            text="๏ I'm *Emli*, a powerful group management bot built to help you manage your group easily."
+            text="๏ I'm *Ultron*, a powerful group management bot built to help you manage your group easily."
             "\n• I can restrict users."
             "\n• I can greet users with customizable welcome messages and even set a group's rules."
             "\n• I have an advanced anti-flood system."
             "\n• I can warn users until they reach max warns, with each predefined actions such as ban, mute, kick, etc."
             "\n• I have a note keeping system, blacklists, and even predetermined replies on certain keywords."
             "\n• I check for admins' permissions before executing any command and more stuffs"
-            "\n\n_Emli's licensed under the GNU General Public License v3.0_"
-            "\n\n Click on button bellow to get basic help for Emli.",
+            "\n\n Click on button bellow to get basic help for Ultron.",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=False,
             reply_markup=InlineKeyboardMarkup(
@@ -408,7 +407,7 @@ def emli_about_callback(update, context):
     elif query.data == "emli_admin":
         query.message.edit_text(
             text=f"*๏ Let's make your group bit effective now*"
-            "\nCongragulations, Emli now ready to manage your group."
+            "\nCongragulations, Ultron now ready to manage your group."
             "\n\n*Admin Tools*"
             "\nBasic Admin tools help you to protect and powerup your group."
             "\nYou can ban members, Kick members, Promote someone as admin through commands of bot."
